@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Android-Starter</string>
+    <string name="app_name">Android Starter</string>
+    <string name="greeting_template">%1$s %2$s!</string>
+    <string name="hello">Hello</string>
+    <string name="greet_button">Greet</string>
+    <string name="name_placeholder">Enter name</string>
+    <string-array name="greetings_array">
+        <item>Hello</item>
+        <item>Bonjour</item>
+        <item>Hola</item>
+        <item>こんにちは</item>
+        <item>안녕하세요</item>
+        <item>Ciao</item>
+    </string-array>
 </resources>
