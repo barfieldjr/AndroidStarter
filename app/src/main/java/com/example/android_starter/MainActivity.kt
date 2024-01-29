@@ -10,13 +10,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.AdapterView
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var textGreeting: TextView
     private lateinit var editTextName: EditText
     private lateinit var spinnerGreetings: Spinner
-    private var selectedGreeting: String = getString(R.string.hello)
+    private lateinit var selectedGreeting: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         editTextName = findViewById(R.id.editText_name)
         spinnerGreetings = findViewById(R.id.spinner_greetings)
         val buttonGreet: Button = findViewById(R.id.button_greet)
+
+        selectedGreeting = getString(R.string.hello)
 
         ArrayAdapter.createFromResource(
             this,
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
-                selectedGreeting = getString(R.string.greet_button)
+                selectedGreeting = getString(R.string.hello)
             }
         }
 
